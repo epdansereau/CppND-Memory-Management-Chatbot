@@ -45,6 +45,22 @@ ChatBot::~ChatBot()
 //// STUDENT CODE
 ////
 
+ChatBot::ChatBot(const ChatBot& other){
+    std::cout<<"ChatBot Copy Constructor" << std::endl;
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+
+    // load image into heap memory
+    _image = new wxBitmap(*other._image);
+};
+ChatBot::ChatBot(ChatBot&& other){
+    std::cout<<"ChatBot Move Constructor" << std::endl;
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
+    _image = other._image;
+    other._image = nullptr;
+};
+
 ////
 //// EOF STUDENT CODE
 
