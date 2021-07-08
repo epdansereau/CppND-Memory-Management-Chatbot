@@ -42,9 +42,6 @@ ChatBot::~ChatBot()
     }
 }
 
-//// STUDENT CODE
-////
-
 // Copy constructor
     ChatBot::ChatBot(const ChatBot& other){
         std::cout<<"ChatBot Copy Constructor" << std::endl;
@@ -101,9 +98,6 @@ ChatBot::~ChatBot()
         other._image = NULL;
         return *this;
     };
-
-////
-//// EOF STUDENT CODE
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {
