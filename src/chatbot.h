@@ -30,25 +30,18 @@ public:
 
     //// STUDENT CODE
     ////
-    ChatBot(const ChatBot& other);
-    ChatBot(ChatBot&& other);
-    ChatBot& operator =(const ChatBot& other){
-        std::cout<<"ChatBot Copy Assignment" << std::endl;
-        _chatLogic = other._chatLogic;
-        _rootNode = other._rootNode;
 
-        // load image into heap memory
-        _image = new wxBitmap(*other._image);
-        return *this;
-    };
-    ChatBot& operator =(ChatBot&& other){
-        std::cout<<"ChatBot Move Assignment" << std::endl;
-        _chatLogic = other._chatLogic;
-        _rootNode = other._rootNode;
-        _image = other._image;
-        other._image = nullptr;
-        return *this;
-    };
+    // Copy constructor
+    ChatBot(const ChatBot& other);
+
+    // Move constructor
+    ChatBot(ChatBot&& other);
+
+    // Copy assignment (TODO)
+    ChatBot& operator =(const ChatBot& other);
+
+    // Move assignment
+    ChatBot& operator =(ChatBot &&other);
     ////
     //// EOF STUDENT CODE
 
